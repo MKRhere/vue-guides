@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Vue App</title>
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+	<div id="app">
+		<button class="vue-btn" @click="reveal">Reveal secret number!</button>
+	</div>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				secretNumber: Math.floor(Math.random() * 100) + 1
+			},
+			methods: {
+				reveal() {
+					alert(`The secret number is: ${this.secretNumber}`)
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Vue App</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="admin in members" v-if="admin.admin">
+                {{admin.member}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                members: [
+                    {
+                        member: "pouria",
+                        admin: true
+                    },
+                    {
+                        member: "thomas",
+                        admin: true
+                    },
+                    {
+                        member: "martin",
+                        admin: true
+                    },
+                    {
+                        member: "faizan",
+                        admin: true
+                    },
+                    {
+                        member: "punya",
+                        admin: false
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
